@@ -13,6 +13,12 @@ function onload() {
         var window2 = remote.getCurrentWindow();
         window2.close();
     });
+    document.querySelectorAll("a").forEach(e => {
+        e.addEventListener("click", ev => {
+            ev.preventDefault()
+            electron.shell.openExternal(e.href)
+        })
+    })
 
     function timeout(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
@@ -45,7 +51,7 @@ function onload() {
         }
         if (data.length) {
             document.getElementById("no-entries").style.display = "none"
-            document.getElementById("entries").innerHTML = ""
+            document.getElementById("entries").querySelectorAll(".entry").forEach(e => e.delete())
             data.forEach(d => {
                 template = document.getElementById("entry-template")
                 clone = template.content.cloneNode(true);
@@ -58,7 +64,6 @@ function onload() {
                 clone.querySelector(".entry-delete").addEventListener("click", deleteEntry)
                 clone.querySelector(".entry-img").addEventListener("click", copyEntry)
                 document.getElementById("entries").appendChild(clone)
-
             })
         } else {
             document.getElementById("entries").innerHTML = ""
