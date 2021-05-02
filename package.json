@@ -1,0 +1,37 @@
+{
+    "name": "clipboard-gallary",
+    "version": "0.0.1",
+    "description": "クリップボードの画像を保存するアプリです。",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sevenc-nanashi/clipboard-gallary"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "sevenc-nanashi",
+        "url": "https://github.com/sevenc-nanashi"
+    },
+    "build": {
+        "appId": "com.electron.clipboard-gallary",
+        "win": {
+            "target": "portable",
+            "icon": "./icon.ico"
+        },
+        "productName": "Clipboard-Gallary",
+        "files": [
+            "*",
+            "pages/*",
+            "!zip/*",
+            "!outputs/*",
+            "!dist/*"
+        ]
+    },
+    "devDependencies": {
+        "archiver": "^5.3.0",
+        "electron": "^12.0.5",
+        "glob": "^7.1.6"
+    },
+    "dependencies": {
+        "@electron/remote": "^1.1.0"
+    }
+}

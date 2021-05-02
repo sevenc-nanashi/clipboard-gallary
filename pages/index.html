@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Clipboard Gallary</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="main-container">
+        <header id="top-bar">
+            <img id="top-bar-logo" src="../icon.ico">
+            <div id="top-bar-draggable"></div>
+            <div id="top-bar-close-buttons">
+                <div id="sys-min" class="top-bar-close-buttons">
+                    <svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                    <rect fill="currentColor" width="10" height="1" x="1" y="6"></rect>
+                </svg>
+                </div>
+                <div id="sys-close" class="top-bar-close-buttons">
+                    <svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12">
+                        <polygon fill="currentColor" fill-rule="evenodd"
+                    points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1">
+                        </polygon>
+                    </svg>
+                </div>
+
+
+            </div>
+        </header>
+        <div id="main">
+            <h1 id="title">Clip-Gallary</h1>
+            <div id="no-entries">
+                <h2>まだ登録されていません。</h2>
+            </div>
+            <div id="entries">
+
+            </div>
+        </div>
+
+    </div>
+    <template id="entry-template">
+        <div class="entry">
+            <img src="" class="entry-img">
+            <div class="entry-bottom">
+                <span class="entry-date"></span>
+                <svg aria-hidden="false" width="12" height="12" viewBox="0 0 12 12" class="entry-delete">
+                    <polygon fill="currentColor" fill-rule="evenodd"
+                points="11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1">
+                    </polygon>
+                </svg>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>
