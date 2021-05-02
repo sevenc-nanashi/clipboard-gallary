@@ -1,6 +1,6 @@
 {
     "name": "clipboard-gallary",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "クリップボードの画像を保存するアプリです。",
     "repository": {
         "type": "git",
