@@ -51,7 +51,7 @@ function onload() {
         }
         if (data.length) {
             document.getElementById("no-entries").style.display = "none"
-            document.getElementById("entries").querySelectorAll(".entry").forEach(e => e.delete())
+            document.getElementById("entries").querySelectorAll(".entry").forEach(e => e.remove())
             data.forEach(d => {
                 template = document.getElementById("entry-template")
                 clone = template.content.cloneNode(true);
